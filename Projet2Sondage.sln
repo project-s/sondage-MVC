@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppProjet2Sondage", "WebAppProjet2Sondage\WebAppProjet2Sondage.csproj", "{CC8675EB-2839-431E-B946-2FE930079E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjet2", "UnitTestProjet2\UnitTestProjet2.csproj", "{F2ACC487-D86D-4CEE-96E3-EA729C4322D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC8675EB-2839-431E-B946-2FE930079E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8675EB-2839-431E-B946-2FE930079E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8675EB-2839-431E-B946-2FE930079E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8675EB-2839-431E-B946-2FE930079E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2ACC487-D86D-4CEE-96E3-EA729C4322D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2ACC487-D86D-4CEE-96E3-EA729C4322D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2ACC487-D86D-4CEE-96E3-EA729C4322D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2ACC487-D86D-4CEE-96E3-EA729C4322D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

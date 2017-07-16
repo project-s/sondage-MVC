@@ -1,0 +1,73 @@
+﻿@model WebAppProjet2Sondage.Models.Domaine.Sondage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.titre = "Résultats";
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <div> 
+        <div class="alert alert-info" role="alert"></div>
+        <h1 class="Centrage"> R E S U L T A T S </h1>
+        <div class="alert alert-info" role="alert"></div>
+    </div>
+
+    <div class="Centrage">
+
+        <form name="myForm" method="post" autocomplete="off">
+            <p>
+                <LABEL for="question">Question : </LABEL><br />
+                <input type="text" name="question" id="question" value="@Model.question" readonly size="50" />
+                <input type="hidden" name="monNumeroSondage" id="monNumeroSondage" value="@Model.numeroDeSondage" />
+                <input type="hidden" name="url" id="url" value="@Model.lienVote" />
+            </p>
+            <br />
+            <hr color="blue">
+            <br />
+
+            @foreach (var choix in Model.ligneDeChoix)
+            {
+                <p>
+                    <label >
+                        @{  
+                            float nbVot = choix.nbVotants;
+                            float nbTotVot = Model.nbTotalVotants;
+                            float total = 0;
+                            var typecadre = "hidden";
+                            if (nbVot != 0)
+                            {
+                                total = (nbVot / nbTotVot * 100);
+                                typecadre = "text";
+                            }
+                            else
+                            {
+                                typecadre = "hidden";
+                            }
+
+                        }
+                        <LABEL>@choix.textChoix  : </LABEL>
+                        <input  title="Nombre de votes @choix.nbVotants" class="result_@choix.indexChoix" type="@typecadre" name="result" readonly size="@total"  />
+                    </label>
+
+                </p>
+            }
+            <hr color="blue">
+        </form>
+
+        <p>Nombre de votants : @Model.nbTotalVotants</p>
+
+        <button onclick="document.location.href='@Url.Action("Index", controllerName:"Creation")'" type="button" class="btn btn-primary">Sondage.Partager();</a></button>
+        <br />
+        <button onclick="document.location.href='@Url.Action("Index", controllerName:"Creation")'" type="button" class="btn btn-primary">Sondage.Nouveau();</a></button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\bin\Debug\TestProjet2Sondage.dll
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\bin\Debug\TestProjet2Sondage.pdb
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\obj\Debug\TestProjet2Sondage.csprojResolveAssemblyReference.cache
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\obj\Debug\TestProjet2Sondage.dll
+C:\Users\tsdi01\Documents\PROJETS\Projet2\Projet2Sondage\TestProjet2Sondage\obj\Debug\TestProjet2Sondage.pdb

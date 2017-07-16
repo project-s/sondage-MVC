@@ -1,0 +1,60 @@
+﻿@model WebAppProjet2Sondage.Controllers.CreationController
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.titre = "Création";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>titreCreation</title>
+    
+</head>
+<body>
+
+    <div class="alert alert-info" role="alert"></div>
+    <h1 class="Centrage"> C R E A T I O N </h1>
+    <div class="alert alert-info" role="alert"></div>
+
+    <div class="Centrage"> 
+        
+        <!-- autocomplete="off" permet de vider le formulaire lorsqu'on revient sur la page-->
+        <form name="myForm" method="post" action="@Url.Action("CreationSondage")" onsubmit="return validateCreateForm()" autocomplete="off">
+            <p>
+                <LABEL for="question">Question : </LABEL>
+                <input type="text" name="question" id="question" placeholder="saisissez votre question" maxlength="50" size="80" />
+            </p>
+            <br />
+            <hr color="blue">
+            <br />
+            <p>
+                <LABEL for="choix1">Choix1 : </LABEL>
+                <input type="text" name="choix1" id="choix1" placeholder="saisissez votre choix1" maxlength="200" size="80"/>
+            </p>
+            <p>
+                <LABEL for="choix2">Choix2 : </LABEL>
+                <input type="text" name="choix2" id="choix2" placeholder="saisissez votre choix2" maxlength="200" size="80"/>
+            </p>
+            <p>
+                <LABEL for="choix3">Choix3 : </LABEL>
+                <input type="text" name="choix3" id="choix3" placeholder="saisissez votre choix3" maxlength="200" size="80"/>
+            </p>
+            <p>
+                <LABEL for="choix4">Choix4 : </LABEL>
+                <input type="text" name="choix4" id="choix4" placeholder="saisissez votre choix4" maxlength="200" size="80" />
+            </p>
+            <p>
+                <LABEL for="TypeChoix">Choix Multiple? : </LABEL>
+                <input type="checkbox" name="TypeChoix" id="TypeChoixMultiple" value="True" />
+            </p>
+            <hr color="blue">
+            <input type="submit" value="Sondage.Créer();" class="btn btn-primary"/>
+        </form>
+        <p>@ViewBag.erreur </p>
+    </div>
+    <script src="~/scripts/script.js"></script>
+</body>
+</html>

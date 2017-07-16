@@ -1,0 +1,74 @@
+﻿@model WebAppProjet2Sondage.Models.Domaine.Sondage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Titre = "Vote";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Titre</title>
+    
+</head>
+<body>
+
+    <div class="alert alert-info" role="alert"></div>
+    <h1 class="Centrage"> V O T E </h1>
+    <div class="alert alert-info" role="alert"></div>
+
+    <div class="Centrage"> 
+
+        <form name="myForm" method="post" action="@Url.Action("CreationVote")" onsubmit="return validateVoteForm()" autocomplete="off">
+            <p>
+                <LABEL for="question">Question : </LABEL><br />
+                <input type="text" name="question" id="question" value="@Model.question" readonly size="50" />
+                <input type="hidden" name="monNumeroSondage" id="monNumeroSondage" value="@Model.numeroDeSondage" />
+                <input type="hidden" name="url" id="url" value="@Model.lienVote" />
+
+            </p>
+            <br />
+            <hr color="blue">
+            <br />
+
+            @foreach (var choix in Model.ligneDeChoix)
+            {
+                <p>
+                    <label>
+                        <input class="checkElement" type="@ViewBag.type" name="@("choix"+@choix.indexChoix)" id="@("idradio"+@choix.indexChoix)" value="@choix.numeroDeChoix" />
+                        @choix.textChoix
+                    </label>
+
+                </p>
+            }
+
+            <hr color="blue">
+            <input type="submit" value="Sondage.Voter();" class="btn btn-primary" />
+        </form>
+
+
+
+
+
+
+
+        @Html.Raw(ViewBag.InformationVote)
+        <p>Nombre de votants : @Model.nbTotalVotants</p>
+
+
+        <br /><br />
+
+        <form name="myFormResultat" method="post" action="@Url.Action("AfficheResultats")">
+            <input type="hidden" name="url" id="url" value="@Model.lienVote" />
+            <input type="submit" value="Sondage.Résultats();" class="btn btn-primary">
+        </form>
+
+
+        <br /><br />
+        <button onclick="document.location.href='@Url.Action("Index", controllerName:"Home")'" type="button" class="btn btn-primary">Site.Accueil();</button>
+
+    </div>
+    <script src="~/scripts/script.js"></script>
+</body>
+</html>
